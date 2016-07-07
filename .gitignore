@@ -38,3 +38,10 @@ captures/
 
 # Keystore files
 *.jks
+
+# obj middle files
+*.obj
+
+# lib files
+*.so
+
