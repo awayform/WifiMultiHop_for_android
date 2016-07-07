@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    
+    android:id="@+id/layout_main"
+    >
+    <include layout="@layout/header"/>
+    <FrameLayout 
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        />
+    
+    <RadioGroup
+    		android:id="@+id/main_tab"
+    		android:background="@drawable/maintab_toolbar_bg"
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:gravity="center_vertical"
+    		android:layout_gravity="bottom">
+    		<RadioButton 
+    			android:layout_marginTop="2.0dip"
+    			android:text="建网"
+    			android:drawableTop="@drawable/icon_home"
+    			android:id="@+id/radio_button_buildnet"
+    			style="@style/main_tab_bottom"/>
+    		<RadioButton 
+    			android:layout_marginTop="2.0dip"
+    			android:text="路由"
+    			android:drawableTop="@drawable/icon_function"
+    			android:id="@+id/radio_button_route"
+    			style="@style/main_tab_bottom"/>
+    		<RadioButton 
+    			android:layout_marginTop="2.0dip"
+    			android:text="业务"
+    			android:drawableTop="@drawable/icon_status"
+    			android:id="@+id/radio_button_service"
+    			style="@style/main_tab_bottom"/>
+    			
+   		</RadioGroup>  
+    
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/welcome_background" >
+	
+   
+   <TextView 
+	    android:id="@+id/welcome_title"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="22dip"
+	    android:gravity="center"
+	    android:layout_marginTop="50dip"
+	    android:text="综合业务网理论及关键技术"
+	    />
+   <ImageView
+       android:id="@+id/welcome_image_view"
+       android:layout_width="250dip"
+       android:layout_height="160dip"
+       android:src="@drawable/welcome_isn" 
+       android:layout_marginTop="90dip"
+       android:scaleType="fitXY"
+       android:layout_centerHorizontal="true"
+       />
+   <TextView
+	    android:id="@+id/welcome_text"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="30dip"
+	    android:gravity="center"
+	    android:text="欢迎使用"
+	    android:layout_marginTop="280dip"
+	    />
+</RelativeLayout>

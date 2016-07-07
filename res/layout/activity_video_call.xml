@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/ackButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nakButton"
+        android:layout_alignParentLeft="true"
+        android:background="#114321"
+        android:text="接听" />
+
+    <!--
+         <TextView
+        android:id="@+id/thruputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lossText"
+        android:layout_below="@+id/lossText"
+        android:text="吞吐量："
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/delayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/stateText"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:text="时延：   "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lossText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/delayText"
+        android:layout_below="@+id/delayText"
+        android:text="丢包率："
+        android:textSize="20sp" />
+    -->
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/endButton"
+        android:layout_alignParentLeft="true"
+        android:background="#FF7700"
+        android:text="取消"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/endButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#55000000"
+        android:text="挂断"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/nakButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cancelButton"
+        android:layout_alignParentLeft="true"
+        android:background="#552211"
+        android:text="拒绝" />
+
+    <SurfaceView
+        android:id="@+id/mySfView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/stateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:background="#FFFF11"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="Waiting..."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xd.wifimultihop"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="16" />
+
+<!--     业务权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+<!--     建网 权限-->
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />   
+	<uses-permission android:name="android.permission.WAKE_LOCK" />    
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.CHANGE_WIMAX_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIMAX_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />    
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />  
+    
+    <application
+        android:name="com.googlecode.android.wifi.tether.TetherApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="com.xd.wifimultihop.ui.WelcomeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xd.wifimultihop.ui.MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:launchMode="singleTask"
+            />
+        
+        
+<!--         业务 -->
+        <service
+            android:name="com.xd.wifimultihop.business.app.CommService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="edu.xd.net.COMM_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.xd.wifimultihop.business.app.ServiceBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="edu.xd.net.SERVICE_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.xd.wifimultihop.business.ui.TalkingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.xd.wifimultihop.business.ui.MultitalkingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.xd.wifimultihop.business.ui.VideoCallActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.xd.wifimultihop.business.ui.DialNoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.xd.wifimultihop.business.ui.FileTransferActivity"/>
+        <activity
+            android:name="com.xd.wifimultihop.business.ui.FileChooseActivity" />
+        <activity
+            android:name="com.xd.wifimultihop.business.ui.ChatActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        
+        
+<!--         建网 -->
+        <service android:enabled="true" android:name="com.googlecode.android.wifi.tether.TetherService" />
+
+        <activity android:name="com.googlecode.android.wifi.tether.LogActivity" android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <activity android:name="com.googlecode.android.wifi.tether.AccessControlActivity" android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <activity android:name="com.googlecode.android.wifi.tether.SetupActivity" android:launchMode="singleTask"/>
+        
+        <receiver android:name="com.googlecode.android.wifi.tether.TetherWidget" android:label="@string/global_application_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.googlecode.android.wifi.tether.intent.STATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_info" />
+        </receiver>
+        
+        <receiver android:name="com.googlecode.android.wifi.tether.TetherServiceReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.googlecode.android.wifi.tether.intent.MANAGE" />
+            </intent-filter>
+        </receiver>
+ 
+         <receiver android:name="com.googlecode.android.wifi.tether.WifiStateChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        
+         
+<!--          路由 -->
+        <activity android:name="com.xd.adhocroute1s.RouteSettingsActivity" />
+        <activity android:name="com.xd.adhocroute1s.NetSettingsActivity" />
+        <service android:name="com.xd.adhocroute1s.route.RouteServices" />
+    </application>
+
+</manifest>

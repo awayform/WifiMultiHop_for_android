@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="路由设置" >
+    <PreferenceCategory android:title="基本设置" >
+        <com.xd.adhocroute1s.route.InterfaceEditPreference
+            android:key="interface"
+            android:singleLine="true"
+            android:title="网卡"
+            android:summary="设置网卡"
+			android:maxLength="32"  
+            android:dialogTitle="设置网卡" 
+			android:dialogMessage="路由运行在如下网卡上："
+            android:defaultValue="wlan0" />
+        <com.xd.adhocroute1s.route.FloatEditPreference
+            android:key="hello_interval"
+            android:singleLine="true"
+            android:title="Hello Interval"
+            android:summary="Hello消息的发送间隔"
+            android:dialogTitle="设置Hello消息的发送间隔" 
+			android:dialogMessage="使用如下设置作为Hello消息的发送间隔，请填写浮点型数据，单位为秒："
+            android:defaultValue="2.0" />
+         <com.xd.adhocroute1s.route.FloatEditPreference
+            android:key="hello_validity"
+            android:singleLine="true"
+            android:title="Hello Validity"
+            android:defaultValue="20.0"
+            android:summary="Hello消息的有效时间"
+            android:dialogTitle="设置Hello消息的有效时间" 
+			android:dialogMessage="使用如下设置作为Hello消息的有效时间，请填写浮点型数据，单位为秒：" />
+         
+         <com.xd.adhocroute1s.route.FloatEditPreference
+            android:key="tc_interval"
+            android:singleLine="true"
+            android:title="TC Interval"
+            android:defaultValue="5.0"
+            android:summary="TC消息的发送间隔"
+            android:dialogTitle="设置TC消息的发送间隔" 
+			android:dialogMessage="使用如下设置作为TC消息的发送间隔，请填写浮点型数据，单位为秒：" />
+         <com.xd.adhocroute1s.route.FloatEditPreference
+            android:key="tc_validity"
+            android:singleLine="true"
+            android:title="TC Validity"
+            android:defaultValue="30.0"
+            android:summary="TC消息的有效时间"
+            android:dialogTitle="设置TC消息的有效时间" 
+			android:dialogMessage="使用如下设置作为TC消息的有效时间，请填写浮点型数据，单位为秒：" />
+         
+         <com.xd.adhocroute1s.route.FloatEditPreference
+            android:key="hna_interval"
+            android:singleLine="true"
+            android:title="HNA Interval"
+            android:defaultValue="5.0"
+            android:summary="HNA消息的发送间隔"
+            android:dialogTitle="设置HNA消息的发送间隔" 
+			android:dialogMessage="使用如下设置作为HNA消息的发送间隔，请填写浮点型数据，单位为秒：" />
+         <com.xd.adhocroute1s.route.FloatEditPreference
+            android:key="hna_validity"
+            android:singleLine="true"
+            android:title="HNA Validity"
+            android:defaultValue="30.0"
+            android:summary="HNA消息的有效时间"
+            android:dialogTitle="设置HNA消息的有效时间" 
+			android:dialogMessage="使用如下设置作为HNA消息的有效时间，请填写浮点型数据，单位为秒：" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="外网设置" >
+        <CheckBoxPreference
+            android:key="is_wan_enabled"
+            android:defaultValue="false"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"
+            android:title="开启外网" />
+        <com.xd.adhocroute1s.route.IPEditPreference
+            android:title="子网"
+            android:key="wan_subnet"
+            android:singleLine="true"
+            android:defaultValue=""
+            android:summary="设置外网子网"
+            android:dialogTitle="设置外网子网" 
+			android:dialogMessage="设置通过该设备可到达的网络IP："
+            android:dependency="is_wan_enabled"
+             />
+        <com.xd.adhocroute1s.route.MaskEditPreference
+            android:title="掩码"
+            android:key="wan_mask"
+            android:singleLine="true"
+            android:defaultValue=""
+            android:summary="设置外网子网掩码"
+            android:dialogTitle="设置外网子网掩码" 
+			android:dialogMessage="设置通过该设备可到达的网络的掩码信息："
+            android:dependency="is_wan_enabled"
+             />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="网关设置" >
+        <CheckBoxPreference
+            android:key="is_dyncheck_gateway_enabled"
+            android:defaultValue="false"
+            android:title="动态检测网关"
+            android:summary="当可以连接外网时，将本设备做为网关出口"
+             />
+        <CheckBoxPreference
+            android:key="is_static_gateway_enabled"
+            android:defaultValue="false"
+            android:title="静态网关"
+            android:summary="设置本设备为网关出口"
+             />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="DNS设置" >
+        <com.xd.adhocroute1s.route.IPEditPreference
+            android:title="设置首选DNS"
+            android:summary="设置首选DNS"
+            android:dialogTitle="设置首选DNS" 
+			android:dialogMessage="使用如下DNS服务器地址："
+            android:key="dns1"
+            android:singleLine="true"
+            android:defaultValue="8.8.8.8"
+         />
+        <com.xd.adhocroute1s.route.IPEditPreference
+            android:title="设置备选DNS"
+            android:summary="设置备选DNS"
+            android:dialogTitle="设置备选DNS" 
+			android:dialogMessage="使用如下DNS服务器地址："
+            android:key="dns2"
+            android:singleLine="true"
+            android:defaultValue="8.8.4.4"
+         />
+       
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="NAT设置" >
+        <CheckBoxPreference
+            android:key="open_nat"
+            android:defaultValue="false"
+            android:title="开启NAT"
+            android:summary="开启NAT功能"
+            android:summaryOn="开启NAT功能"
+            android:summaryOff="关闭NAT功能"
+             />
+        <com.xd.adhocroute1s.route.NetIPEditPreference
+            android:key="natsubnet"
+            android:singleLine="true"
+            android:defaultValue=""
+            android:dependency="open_nat"
+            android:title="子网IP"
+            android:summary="设置要NAT的子网IP"
+            android:dialogTitle="设置要NAT的子网IP" 
+			android:dialogMessage="使用如下如下形式：子网IP/网络号，如192.168.2.0/24："
+             />
+        <com.xd.adhocroute1s.route.IPEditPreference
+            android:key="natip"
+            android:singleLine="true"
+            android:title="映射ip"
+            android:dependency="open_nat"
+            android:defaultValue=""
+            android:summary="设置通过该IP的数据包进行NAT"
+            android:dialogTitle="设置通过该IP的数据包进行NAT" 
+			android:dialogMessage="设置通过如下设置的IP的数据包进行NAT："
+             />
+        <com.xd.adhocroute1s.route.InterfaceEditPreference
+            android:key="natinterface"
+            android:singleLine="true"
+            android:title="映射网卡"
+            android:defaultValue=""
+            android:dependency="open_nat"
+            android:summary="设置通过该网卡的数据包进行NAT"
+            android:dialogTitle="设置通过该网卡的数据包进行NAT" 
+			android:dialogMessage="设置通过如下设置的网卡的数据包进行NAT："
+             />
+    </PreferenceCategory>
+
+</PreferenceScreen>
