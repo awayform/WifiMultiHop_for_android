@@ -37,7 +37,6 @@ import android.widget.ToggleButton;
 import com.googlecode.android.wifi.tether.data.ClientAdapter;
 import com.googlecode.android.wifi.tether.data.ClientData;
 import com.googlecode.android.wifi.tether.system.CoreTask;
-import com.xd.wifimultihop.R;
 
 public class AccessControlActivity extends ListActivity {
 	

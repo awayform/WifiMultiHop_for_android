@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.PreferenceActivity;
 
+import com.googlecode.android.wifi.tether.R;
 import com.googlecode.android.wifi.tether.TetherApplication;
 import com.xd.adhocroute1s.route.IPEditPreference;
 import com.xd.adhocroute1s.route.InterfaceEditPreference;
 import com.xd.adhocroute1s.route.NetIPEditPreference;
-import com.xd.wifimultihop.R;
 
 public class RouteSettingsActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 	

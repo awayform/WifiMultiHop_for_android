@@ -28,7 +28,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.xd.wifimultihop.R;
+import com.googlecode.android.wifi.tether.R;
 import com.xd.wifimultihop.business.app.CommService;
 import com.xd.wifimultihop.business.app.Constants;
 import com.xd.wifimultihop.business.socket.GetIpAddress;
@@ -42,7 +42,7 @@ public class BusinessFragment extends Fragment {
 
 	private static final String TAG = "BusinessFragment";
 	private Integer[] mThumbIds = { R.drawable.icon_business_telephone, R.drawable.icon_business_voip,
-			R.drawable.icon_business_message, R.drawable.icon_business_telephone, 
+			R.drawable.icon_business_message, R.drawable.icon_business_multi_telephone, 
 			R.drawable.icon_business_file, R.drawable.icon_business_browser};
 
 	private String[] mLable = { "wifi语音", "wifi视频", "文字聊天", "wifi多人语音", "文件传输", "浏览网页" };

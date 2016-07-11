@@ -22,7 +22,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xd.wifimultihop.R;
+import com.googlecode.android.wifi.tether.R;
 import com.xd.wifimultihop.business.app.CommService;
 import com.xd.wifimultihop.business.app.Constants;
 import com.xd.wifimultihop.business.comm.VideoComm;

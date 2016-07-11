@@ -49,7 +49,6 @@ import android.view.SubMenu;
 import android.view.View;
 
 import com.googlecode.android.wifi.tether.system.Configuration;
-import com.xd.wifimultihop.R;
 
 public class SetupActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 	

@@ -26,8 +26,8 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 
 import com.googlecode.android.wifi.tether.AccessControlActivity;
+import com.googlecode.android.wifi.tether.R;
 import com.googlecode.android.wifi.tether.TetherApplication;
-import com.xd.wifimultihop.R;
 
 public class ClientAdapter extends BaseAdapter {
 	

@@ -30,9 +30,9 @@ import android.widget.RelativeLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.googlecode.android.wifi.tether.R;
 import com.googlecode.android.wifi.tether.TetherApplication;
 import com.googlecode.android.wifi.tether.TetherService;
-import com.xd.wifimultihop.R;
 
 public class BuildNetFragment extends Fragment {
 
@@ -725,38 +725,6 @@ public class BuildNetFragment extends Fragment {
 						}).show();
 	}
 
-	private void openAboutDialog() {
-		LayoutInflater li = LayoutInflater.from(BuildNetFragment.this
-				.getActivity());
-		View view = li.inflate(R.layout.aboutview, null);
-		TextView versionName = (TextView) view.findViewById(R.id.versionName);
-		versionName.setText(this.application.getVersionName());
-		TextView authors = (TextView) view.findViewById(R.id.authors);
-		authors.setText(Html.fromHtml(TetherApplication.AUTHORS));
-		authors.setMovementMethod(LinkMovementMethod.getInstance());
-
-		new AlertDialog.Builder(BuildNetFragment.this.getActivity())
-				.setTitle(getString(R.string.main_activity_about))
-				.setView(view)
-				.setNeutralButton(getString(R.string.main_activity_donate),
-						new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog,
-									int whichButton) {
-								Log.d(TAG, "Donate pressed");
-								Uri uri = Uri
-										.parse(getString(R.string.donateUrl));
-								startActivity(new Intent(Intent.ACTION_VIEW,
-										uri));
-							}
-						})
-				.setNegativeButton(getString(R.string.main_activity_close),
-						new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog,
-									int whichButton) {
-								Log.d(TAG, "Close pressed");
-							}
-						}).show();
-	}
 
 	public void openUpdateDialog(final String downloadFileUrl,
 			final String fileName, final String message,

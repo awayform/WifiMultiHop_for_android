@@ -23,7 +23,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.xd.wifimultihop.R;
+import com.googlecode.android.wifi.tether.R;
 import com.xd.wifimultihop.business.app.CommService;
 import com.xd.wifimultihop.business.app.Constants;
 import com.xd.wifimultihop.business.frame.ChatMessage;

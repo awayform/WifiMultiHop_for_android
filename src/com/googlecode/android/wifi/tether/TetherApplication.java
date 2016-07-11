@@ -42,7 +42,6 @@ import com.googlecode.android.wifi.tether.system.Configuration;
 import com.googlecode.android.wifi.tether.system.CoreTask;
 import com.googlecode.android.wifi.tether.system.WebserviceTask;
 import com.xd.adhocroute1s.AdhocRouteApp;
-import com.xd.wifimultihop.R;
 import com.xd.wifimultihop.ui.BuildNetFragment;
 import com.xd.wifimultihop.ui.MainActivity;
 
@@ -171,7 +170,7 @@ public class TetherApplication extends Application {
 
         // init notificationManager
         this.notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
-    	this.notification = new Notification(R.drawable.start_notification, "WiFi Tether", System.currentTimeMillis());
+    	this.notification = new Notification(R.drawable.ic_launcher, "WiFi多跳组网", System.currentTimeMillis());
     	this.mainIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0);
     	this.accessControlIntent = PendingIntent.getActivity(this, 1, new Intent(this, AccessControlActivity.class), 0);
     	
@@ -238,7 +237,7 @@ public class TetherApplication extends Application {
 		boolean encEnabled = this.settings.getBoolean("encpref", false);
 		boolean acEnabled = this.settings.getBoolean("acpref", false);
 		String ssid = this.settings.getString("ssidpref", "AndroidTether");
-		String ipAddr = this.settings.getString("ipaddr", "" + new Random().nextInt(254) + 1);
+		String ipAddr = this.settings.getString("ipaddr", "" + "" + (new Random().nextInt(254) + 1));
         String txpower = this.settings.getString("txpowerpref", "disabled");
         String lannetwork = this.settings.getString("lannetworkpref", DEFAULT_LANNETWORK);
         boolean currentMacSpoofEnabled = this.settings.getBoolean("tether.macspoof", false);

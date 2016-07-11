@@ -9,9 +9,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 
+import com.googlecode.android.wifi.tether.R;
 import com.googlecode.android.wifi.tether.TetherApplication;
 import com.xd.adhocroute1s.AdhocRouteApp;
-import com.xd.wifimultihop.R;
 import com.xd.wifimultihop.ui.MainActivity;
 
 public class RouteServices extends Service {

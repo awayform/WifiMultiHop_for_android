@@ -43,7 +43,6 @@ import com.googlecode.android.wifi.tether.system.Configuration;
 import com.googlecode.android.wifi.tether.system.CoreTask;
 import com.googlecode.android.wifi.tether.system.FallbackTether;
 import com.googlecode.android.wifi.tether.system.WimaxHelper;
-import com.xd.wifimultihop.R;
 
 @SuppressLint("NewApi")
 public class TetherService extends Service {

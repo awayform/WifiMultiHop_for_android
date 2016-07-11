@@ -23,6 +23,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.googlecode.android.wifi.tether.R;
 import com.googlecode.android.wifi.tether.TetherApplication;
 import com.xd.adhocroute1s.AdhocRouteApp;
 import com.xd.adhocroute1s.data.Interface;
@@ -33,7 +34,6 @@ import com.xd.adhocroute1s.route.RouteRefresh;
 import com.xd.adhocroute1s.route.RouteRefresh.Callback;
 import com.xd.adhocroute1s.route.RouteServices;
 import com.xd.adhocroute1s.utils.ConfigHelper;
-import com.xd.wifimultihop.R;
 
 public class RouteFragment extends Fragment implements OnClickListener {
 

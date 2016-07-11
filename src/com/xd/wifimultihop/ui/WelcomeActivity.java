@@ -10,7 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xd.wifimultihop.R;
+import com.googlecode.android.wifi.tether.R;
 
 public class WelcomeActivity extends Activity implements AnimationListener {
 	private ImageView imageView = null;
