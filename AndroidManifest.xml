@@ -94,6 +94,8 @@
         <activity
             android:name="com.xd.wifimultihop.business.ui.ChatActivity"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.xd.wifimultihop.business.ui.ExploreActivity" />
         
         
 <!--         建网 -->

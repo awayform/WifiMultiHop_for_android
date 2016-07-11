@@ -60,7 +60,7 @@ public class RouteAdapter extends BaseAdapter{
 		holder.tvmask.setText("/" + routeTables.get(position).genmask);
 		holder.tvGateway.setText(routeTables.get(position).gateway);
 		holder.tvMetric.setText(routeTables.get(position).metric + "");
-		holder.tvETX.setText(routeTables.get(position).rtpMetricCost + "");
+		holder.tvETX.setText(String.format("%.2f", routeTables.get(position).rtpMetricCost*1.0/1024));
 		holder.tvInterface.setText(routeTables.get(position).networkInterface);
 		return convertView;
 	}

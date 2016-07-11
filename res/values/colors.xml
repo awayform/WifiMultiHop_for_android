@@ -6,4 +6,13 @@
     <color name="DarkGrey">#A0909090</color>
     <color name="Red">#FFFF2211</color>
     <color name="Green">#FF00B627</color>
+    
+    
+    <color name="dialog_cancel_bg_normal">#f8f6f6</color>
+    <color name="dialog_cancel_bg_pressed">#e3e3e3</color>
+    <color name="dialog_ok_bg_normal">#ffefea</color>
+    <color name="dialog_ok_bg_pressed">#f0cfc4</color>
+    
+    
+    
 </resources>

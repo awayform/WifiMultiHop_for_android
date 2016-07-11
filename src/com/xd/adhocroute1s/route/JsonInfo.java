@@ -137,7 +137,7 @@ public class JsonInfo {
 		
 		try {
 			String dump = command(cmd);
-			System.out.println("json ---- >" + dump);
+//			System.out.println("json ---- >" + dump);
 			if (! dump.contentEquals(""))
 				// 等于""说明请求数据失败了
 				ret = mapper.readValue(dump, OlsrDataDump.class);

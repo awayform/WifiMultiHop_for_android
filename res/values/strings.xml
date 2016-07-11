@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Wifi多跳演示</string>
-
     
     <string name="global_application_name">WiFi Tether</string>
 	<string name="global_application_installed">Binaries and config-files installed!</string>

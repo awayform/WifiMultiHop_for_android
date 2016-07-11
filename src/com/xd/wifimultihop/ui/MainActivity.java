@@ -165,6 +165,16 @@ public class MainActivity extends Activity {
 		        startActivityForResult(new Intent(
 		        		MainActivity.this, AccessControlActivity.class), 0);   		
 		    break;
+	    	case MENU_ABOUT :
+	    		CommonDialog dialog = new CommonDialog(this);
+				dialog.setTitle("关于软件");
+				dialog.setMessage("本软件由是通过Android的wifi进行Ad-Hoc组网实现多跳功能，可以支持上层语音视频等业务。\n\n"
+						+ "联系：西安电子科技大学ISN实验室，老科A614");
+				dialog.showNegitiveButton(false);
+				dialog.showPositiveButton(false);
+				dialog.show();
+		    break;
+		    
 		    
     	}
     	return supRetVal;

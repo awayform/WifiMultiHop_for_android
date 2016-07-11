@@ -34,6 +34,7 @@ import com.xd.wifimultihop.business.app.Constants;
 import com.xd.wifimultihop.business.socket.GetIpAddress;
 import com.xd.wifimultihop.business.ui.ChatActivity;
 import com.xd.wifimultihop.business.ui.DialNoActivity;
+import com.xd.wifimultihop.business.ui.ExploreActivity;
 import com.xd.wifimultihop.business.ui.FileChooseActivity;
 import com.xd.wifimultihop.business.ui.MultitalkingActivity;
 
@@ -308,9 +309,13 @@ public class BusinessFragment extends Fragment {
 				break;
 			case 5:
 				// 浏览网页
+				intent.setClass(getActivity(), ExploreActivity.class);
 				break;
 			}
-			startActivity(intent);
+			
+			if (intent!=null) {
+				startActivity(intent);
+			}
 		}
 	}
 }
