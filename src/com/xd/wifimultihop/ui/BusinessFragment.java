@@ -311,6 +311,9 @@ public class BusinessFragment extends Fragment {
 				// 浏览网页
 				intent.setClass(getActivity(), ExploreActivity.class);
 				break;
+				// 在红米2A上有bug，要规避。由于语音视频等业务对IP的监听可能出问题
+				//Toast.makeText(BusinessFragment.this.getActivity(), "浏览网页", 0).show();
+				//return;
 			}
 			
 			if (intent!=null) {
