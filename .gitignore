@@ -40,6 +40,7 @@ captures/
 *.jks
 
 # obj middle files
+obj/
 *.obj
 
 # lib files
