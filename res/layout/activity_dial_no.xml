@@ -39,10 +39,12 @@
 
         <Button
             android:id="@+id/dialButton"
+            android:background="@drawable/btn_bk"
+            android:textColor="#fff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="拨号" />
+            android:text="语音" />
     </LinearLayout>
 
 </RelativeLayout>

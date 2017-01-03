@@ -45,7 +45,7 @@ public class BusinessFragment extends Fragment {
 			R.drawable.icon_business_message, R.drawable.icon_business_multi_telephone, 
 			R.drawable.icon_business_file, R.drawable.icon_business_browser};
 
-	private String[] mLable = { "wifi语音", "wifi视频", "文字聊天", "wifi多人语音", "文件传输", "浏览网页" };
+	private String[] mLable = { "语音", "视频", "文本通信", "群组通信", "文件传输", "网页浏览" };
 
 	private View view;
 	private GridView gridview;
@@ -309,11 +309,11 @@ public class BusinessFragment extends Fragment {
 				break;
 			case 5:
 				// 浏览网页
-				intent.setClass(getActivity(), ExploreActivity.class);
-				break;
+//				intent.setClass(getActivity(), ExploreActivity.class);
+//				break;
 				// 在红米2A上有bug，要规避。由于语音视频等业务对IP的监听可能出问题
-				//Toast.makeText(BusinessFragment.this.getActivity(), "浏览网页", 0).show();
-				//return;
+				Toast.makeText(BusinessFragment.this.getActivity(), "浏览网页", 0).show();
+				return;
 			}
 			
 			if (intent!=null) {

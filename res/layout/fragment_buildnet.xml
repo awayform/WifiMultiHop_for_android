@@ -11,6 +11,7 @@
         android:layout_gravity="center_horizontal" >
 
         <RelativeLayout
+            android:visibility="invisible"
             android:id="@+id/layoutBatteryTemp"
             android:layout_width="wrap_content"
             android:layout_height="25dp"

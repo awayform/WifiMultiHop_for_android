@@ -15,7 +15,7 @@ import com.xd.adhocroute1s.AdhocRouteApp;
 import com.xd.wifimultihop.ui.MainActivity;
 
 public class RouteServices extends Service {
-	public static final String CMD_OLSR_CONTAIN = "app_bin/olsrd";
+	public static final String CMD_OLSR_CONTAIN = "app_bin/wifiroute";
 	private static final int ID_FORGROUND = 2;
 	private String olsrdPath;
 	private String olsrdConfPath;
@@ -27,8 +27,8 @@ public class RouteServices extends Service {
 		super.onCreate();
 		application = ((TetherApplication)getApplication()).adhocRouteApp;
 //		runForground();
-		olsrdPath = new File(getDir("bin", Context.MODE_PRIVATE), "olsrd").getAbsolutePath();
-		olsrdConfPath = new File(getFilesDir(), "olsrd.conf").getAbsolutePath();
+		olsrdPath = new File(getDir("bin", Context.MODE_PRIVATE), "wifiroute").getAbsolutePath();
+		olsrdConfPath = new File(getFilesDir(), "wifiroute.conf").getAbsolutePath();
 		olsrStartCmd = olsrdPath + " -f " +  olsrdConfPath; /* + " -i " + inface*/
 	}
 	

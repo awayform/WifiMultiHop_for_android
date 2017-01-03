@@ -20,37 +20,6 @@
         android:background="#114321"
         android:text="接听" />
 
-    <!--
-         <TextView
-        android:id="@+id/thruputText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lossText"
-        android:layout_below="@+id/lossText"
-        android:text="吞吐量："
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/delayText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/stateText"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="40dp"
-        android:text="时延：   "
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/lossText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/delayText"
-        android:layout_below="@+id/delayText"
-        android:text="丢包率："
-        android:textSize="20sp" />
-    -->
-
     <Button
         android:id="@+id/cancelButton"
         android:layout_width="match_parent"

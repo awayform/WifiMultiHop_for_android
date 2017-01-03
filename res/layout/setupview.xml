@@ -279,7 +279,7 @@
 			android:summary="@string/setup_layout_battery_summary"  
 			android:entries="@array/batterytempnames"  
 			android:entryValues="@array/batterytempvalues"  
-			android:defaultValue="celsius"
+			android:defaultValue="disabled"
 			android:dialogTitle="@string/setup_layout_battery" />
 		<CheckBoxPreference  
 			android:key="enable4gpref"  

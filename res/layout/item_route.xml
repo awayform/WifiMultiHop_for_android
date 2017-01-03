@@ -20,8 +20,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_dest_tag"
             android:textColor="#000"
-            
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_dest"
@@ -30,10 +29,11 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_dest_content"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -45,7 +45,7 @@
             android:text="@string/tv_mask_tag"
             android:layout_gravity="center_horizontal"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_mask"
@@ -54,7 +54,7 @@
             android:text="@string/tv_mask_content"
             android:layout_gravity="center_horizontal"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,7 +69,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_next_tag"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_gateway"
@@ -78,10 +78,11 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_next_content"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"
@@ -94,7 +95,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_hps_tag"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_metric"
@@ -103,7 +104,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_hps_content"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -111,7 +112,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        
+        android:visibility="gone"
         android:orientation="vertical" >
 
         <TextView
@@ -120,7 +121,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_etx_tag"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_etx"
@@ -129,7 +130,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_etx_content"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -145,7 +146,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_interface_tag"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_interface"
@@ -154,7 +155,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/tv_interface_content"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -11,7 +11,10 @@
             android:dialogTitle="设置网卡" 
 			android:dialogMessage="路由运行在如下网卡上："
             android:defaultValue="wlan0" />
-        <com.xd.adhocroute1s.route.FloatEditPreference
+    </PreferenceCategory>
+    
+    <!-- <com.xd.adhocroute1s.route.FloatEditPreference
+            visi
             android:key="hello_interval"
             android:singleLine="true"
             android:title="Hello Interval"
@@ -61,7 +64,9 @@
             android:summary="HNA消息的有效时间"
             android:dialogTitle="设置HNA消息的有效时间" 
 			android:dialogMessage="使用如下设置作为HNA消息的有效时间，请填写浮点型数据，单位为秒：" />
-    </PreferenceCategory>
+    -->
+    
+    
     
     <PreferenceCategory android:title="外网设置" >
         <CheckBoxPreference

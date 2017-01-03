@@ -133,12 +133,12 @@ public class MainActivity extends Activity {
     	route.setIcon(drawable.ic_menu_preferences);
     	
     	
-    	if (this.application.accessControlSupported) { 
-    		SubMenu accessctr = menu.addSubMenu(0, MENU_ACCESS, 0, getString(R.string.main_activity_accesscontrol));
-    		accessctr.setIcon(drawable.ic_menu_edit);   
-    	}
-    	SubMenu log = menu.addSubMenu(0, MENU_LOG, 0, getString(R.string.main_activity_showlog));
-    	log.setIcon(drawable.ic_menu_agenda);
+//    	if (this.application.accessControlSupported) { 
+//    		SubMenu accessctr = menu.addSubMenu(0, MENU_ACCESS, 0, getString(R.string.main_activity_accesscontrol));
+//    		accessctr.setIcon(drawable.ic_menu_edit);   
+//    	}
+//    	SubMenu log = menu.addSubMenu(0, MENU_LOG, 0, getString(R.string.main_activity_showlog));
+//    	log.setIcon(drawable.ic_menu_agenda);
     	SubMenu about = menu.addSubMenu(0, MENU_ABOUT, 0, getString(R.string.main_activity_about));
     	about.setIcon(drawable.ic_menu_info_details); 
     	return supRetVal;
@@ -168,8 +168,8 @@ public class MainActivity extends Activity {
 	    	case MENU_ABOUT :
 	    		CommonDialog dialog = new CommonDialog(this);
 				dialog.setTitle("关于软件");
-				dialog.setMessage("本软件由是通过Android的wifi进行Ad-Hoc组网实现多跳功能，可以支持上层语音视频等业务。\n\n"
-						+ "联系：西安电子科技大学ISN实验室，老科A614");
+				dialog.setMessage("本软件由是通过Wifi进行Ad-Hoc自组网实现多跳功能，可以支持上层语音视频等业务。\n\n"
+						+ "联系：中国电子科技集团公司第27研究所");
 				dialog.showNegitiveButton(false);
 				dialog.showPositiveButton(false);
 				dialog.show();

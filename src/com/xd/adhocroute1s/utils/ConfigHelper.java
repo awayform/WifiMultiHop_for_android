@@ -36,7 +36,7 @@ public class ConfigHelper {
 
 	public static void setup(Context context) {
 		app_bin = context.getDir("bin", Context.MODE_PRIVATE).getAbsoluteFile();
-		olsrdFilePath = new File(app_bin, "olsrd").getAbsolutePath();
+		olsrdFilePath = new File(app_bin, "wifiroute").getAbsolutePath();
 	}
 
 	public static boolean unzipAssets(Context context) {
@@ -109,20 +109,20 @@ public class ConfigHelper {
 		boolean staticGatewayEnabled = app.preferenceUtils.getBoolean("is_static_gateway_enabled", false);
 		boolean dynamicCheckGateway = app.preferenceUtils.getBoolean("is_dyncheck_gateway_enabled", false);
 		// 动态监测网关
-		String dynGatewayPath = ConfigHelper.app_bin.getAbsolutePath() + "/olsrd_dyn_gw_plain";
+		String dynGatewayPath = ConfigHelper.app_bin.getAbsolutePath() + "/wifiroute_dyn_gw";
 
 		// 网卡信息
 		if (!app.coretask.networkInterfaceExists(inface)) {
 			return false;
 		}
 		
-		String baseConfig = ConfigHelper.app_bin.getAbsolutePath() + "/olsrd.conf";
+		String baseConfig = ConfigHelper.app_bin.getAbsolutePath() + "/wifiroute.conf";
 		// config里面已经有了基础的配置信息
 		RouteConfig config = null;
 		try {
 			config = new RouteConfig(baseConfig);
 		} catch (FileNotFoundException e) {
-			File olsrdConfFile = new File(app_bin,"/olsrd.conf");
+			File olsrdConfFile = new File(app_bin,"/wifiroute.conf");
 			try {
 				config = new RouteConfig(olsrdConfFile.getAbsolutePath());
 			} catch (Exception e1) {
@@ -160,7 +160,7 @@ public class ConfigHelper {
 		
 		// 到目前为止 已经把所有的配置信息转化为对应成这个类Config
 		try {
-			FileOutputStream olsrdConf = context.openFileOutput("olsrd.conf", 0);
+			FileOutputStream olsrdConf = context.openFileOutput("wifiroute.conf", 0);
 			config.write(olsrdConf);
 			olsrdConf.close();
 		} catch (FileNotFoundException e) {

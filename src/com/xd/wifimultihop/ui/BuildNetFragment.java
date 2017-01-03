@@ -238,10 +238,11 @@ public class BuildNetFragment extends Fragment {
 		intentFilter = new IntentFilter();
 
 		// Check, if the battery-temperature should be displayed
-		if (this.application.settings.getString("batterytemppref", "celsius")
+		if (this.application.settings.getString("batterytemppref", "disabled")
 				.equals("disabled") == false) {
 			// Add an intent-Filter for Battery-Temperature-Updates
 			intentFilter.addAction(Intent.ACTION_BATTERY_CHANGED);
+			//changed by yqh
 			this.batteryTemperatureLayout.setVisibility(View.VISIBLE);
 		} else {
 			this.batteryTemperatureLayout.setVisibility(View.INVISIBLE);

@@ -76,6 +76,7 @@ public class DialNoActivity extends Activity {
 			break;
 		case Constants.VIDEO_REQ:
 			typeText.setText("视频拨号");
+			dialButton.setText("视频");
 			intent = new Intent(DialNoActivity.this, VideoCallActivity.class);
 			intent.putExtra(Constants.EXTRA_VIDEOCALL, true); // true:主动打开
 			serviceIntent.putExtra(Constants.EXTRA_CMD_TYPE,
@@ -89,6 +90,7 @@ public class DialNoActivity extends Activity {
 			long fileSize = getIntent
 					.getLongExtra(Constants.EXTRA_FILESIZE, -1);
 			typeText.setText("文件传输");
+			dialButton.setText("发送");
 			intent = new Intent(DialNoActivity.this, FileTransferActivity.class);
 			intent.putExtra(Constants.EXTRA_FILETRANSFER, true); // true:主动打开
 			intent.putExtra(Constants.EXTRA_FILENAME, fileName);
@@ -101,7 +103,7 @@ public class DialNoActivity extends Activity {
 			break;
 		case Constants.MSG_REQ:
 			typeText.setText("聊天");
-			dialButton.setText("打开");
+			dialButton.setText("通信");
 			intent = new Intent(DialNoActivity.this, ChatActivity.class);
 			break;
 		default:

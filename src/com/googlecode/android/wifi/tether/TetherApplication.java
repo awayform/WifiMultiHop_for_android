@@ -123,6 +123,7 @@ public class TetherApplication extends Application {
 	
 	
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate() {
 		Log.d(MSG_TAG, "Calling onCreate()");
@@ -170,7 +171,7 @@ public class TetherApplication extends Application {
 
         // init notificationManager
         this.notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
-    	this.notification = new Notification(R.drawable.ic_launcher, "WiFi多跳组网", System.currentTimeMillis());
+    	this.notification = new Notification(R.drawable.ic_launcher, "WiFi自组网", System.currentTimeMillis());
     	this.mainIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0);
     	this.accessControlIntent = PendingIntent.getActivity(this, 1, new Intent(this, AccessControlActivity.class), 0);
     	

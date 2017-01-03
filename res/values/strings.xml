@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Wifi多跳组网</string>
+    <string name="app_name">Wifi自组网</string>
     
     <string name="global_application_name">WiFi Tether</string>
 	<string name="global_application_installed">Binaries and config-files installed!</string>
@@ -518,7 +518,7 @@
     <string name="tv_mask_content">/32</string>
     <string name="tv_next_tag">下一跳</string>
     <string name="tv_next_content">192.168.2.250</string>
-    <string name="tv_hps_tag">跳数</string>
+    <string name="tv_hps_tag">跳  数</string>
     <string name="tv_hps_content">2</string>
     <string name="tv_etx_tag">ETX</string>
     <string name="tv_etx_content">1.005</string>

@@ -125,9 +125,9 @@ public class RouteFragment extends Fragment implements OnClickListener {
 					List<Interface> interfaces = (List<Interface>)olsrDataDump.interfaces;
 					if (interfaces != null && interfaces.size() != 0) {
 						Interface inface = interfaces.get(0);
-						tvinfo.setText("IP：" + inface.ipv4Address + "\n"
-									 + "网卡：" + inface.name + "\n"
-									 + "mac地址：" + inface.macAddress
+						tvinfo.setText("本机IP：" + inface.ipv4Address + "\n"
+									 //+ "网卡：" + inface.name + "\n"
+									 + "本机mac：" + inface.macAddress
 										);
 					}
 					List<Route> routes = (List<Route>)olsrDataDump.routes;
