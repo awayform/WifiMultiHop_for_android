@@ -1,10 +1,12 @@
 package com.xd.adhocroute1s;
 
+import android.app.ActionBar;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.PreferenceActivity;
+import android.view.MenuItem;
 
 import com.googlecode.android.wifi.tether.R;
 import com.googlecode.android.wifi.tether.TetherApplication;
@@ -25,6 +27,8 @@ public class RouteSettingsActivity extends PreferenceActivity implements OnShare
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		addPreferencesFromResource(R.xml.routepreferences);
 		init();
 	}
@@ -79,4 +83,14 @@ public class RouteSettingsActivity extends PreferenceActivity implements OnShare
 			super.onBackPressed();
 		}
 	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {  
+	    case android.R.id.home:
+	    	onBackPressed();
+	        return true;
+	    } 
+		return super.onOptionsItemSelected(item);
+	}  
 }

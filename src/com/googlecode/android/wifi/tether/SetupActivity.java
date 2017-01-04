@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import android.R.drawable;
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -92,7 +93,8 @@ public class SetupActivity extends PreferenceActivity implements OnSharedPrefere
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+        ActionBar actionBar = getActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
         // Init Application
         this.application = (TetherApplication)this.getApplication();
   
@@ -1113,6 +1115,10 @@ public class SetupActivity extends PreferenceActivity implements OnSharedPrefere
     
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
+    	if(menuItem.getItemId() == android.R.id.home) {  
+	    	onBackPressed();
+	        return true;
+	    } 
     	boolean supRetVal = super.onOptionsItemSelected(menuItem);
     	Log.d(TAG, "Menuitem:getId  -  "+menuItem.getItemId()+" -- "+menuItem.getTitle()); 
     	if (menuItem.getItemId() == 0) {
