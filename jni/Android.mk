@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE    := libwtnativetask
-LOCAL_SRC_FILES := com_googlecode_android_wifi_tether_system_NativeTask.c 
+LOCAL_SRC_FILES := com_googlecode_android_wifi_tether_system_NativeTask.c
 #LOCAL_SHARED_LIBRARIES := libcutils
 include $(BUILD_SHARED_LIBRARY)
 
@@ -19,7 +19,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE:= libspeex
 LOCAL_CFLAGS = -DFIXED_POINT -DUSE_KISS_FFT -DEXPORT="" -UHAVE_CONFIG_H
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
- 
+
 LOCAL_SRC_FILES :=\
 libspeex/bits.c \
 libspeex/buffer.c \
