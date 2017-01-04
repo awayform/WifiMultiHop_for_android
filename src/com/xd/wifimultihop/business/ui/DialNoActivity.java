@@ -1,9 +1,11 @@
 package com.xd.wifimultihop.business.ui;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -52,6 +54,9 @@ public class DialNoActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
+		
 		setContentView(R.layout.activity_dial_no);
 
 		typeText = (TextView) findViewById(R.id.typeText);
@@ -111,5 +116,15 @@ public class DialNoActivity extends Activity {
 			break;
 		}
 
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {  
+	    case android.R.id.home:
+	    	onBackPressed();
+	        return true;
+	    }
+		return super.onOptionsItemSelected(item);
 	}
 }

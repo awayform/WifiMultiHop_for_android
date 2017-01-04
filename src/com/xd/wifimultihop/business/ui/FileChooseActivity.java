@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -88,6 +90,8 @@ public class FileChooseActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		setContentView(R.layout.activity_file_choose);
 		returnPos = new HashMap<File, Integer>();
 		pathText = (TextView) findViewById(R.id.textPath);
@@ -170,5 +174,15 @@ public class FileChooseActivity extends Activity {
 		for (int i = 0; i < files.length; i++) {
 			curFileList.add(files[i]);
 		}
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {  
+	    case android.R.id.home:
+	    	onBackPressed();
+	        return true;
+	    }
+		return super.onOptionsItemSelected(item);
 	}
 }
