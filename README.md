@@ -82,3 +82,11 @@ wifi自组网，建网，路由，语音视频等业务。
 > 3.修改部分图片和显示效果
 
 > 4. 修复其他一些bug
+
+###update：2017年6月16日20:20:39
+
+> 1.修复BUG，git提交时会将LF改为CRLF，导致bug，在windows下使用git关闭自动转换功能，尤其是项目中包含Linux下的文件时。
+
+> 2.合并packagechange分支到主分支。
+
+> 3.注意changefor27和HM2A分支都是在比较旧的packagechange分支派生来的，res/raw下的文件一般也有问题。
