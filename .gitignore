@@ -47,3 +47,6 @@ obj/
 *.so
 
 .project
+.classpath
+.cproject
+proguard-project.txt
