@@ -50,3 +50,4 @@ obj/
 .classpath
 .cproject
 proguard-project.txt
+.settings/
