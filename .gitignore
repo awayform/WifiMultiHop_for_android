@@ -46,3 +46,4 @@ obj/
 # lib files
 *.so
 
+.project
