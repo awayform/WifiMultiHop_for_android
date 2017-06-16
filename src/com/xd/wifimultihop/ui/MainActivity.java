@@ -18,10 +18,10 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.googlecode.android.wifi.tether.AccessControlActivity;
 import com.googlecode.android.wifi.tether.LogActivity;
+import com.googlecode.android.wifi.tether.R;
 import com.googlecode.android.wifi.tether.SetupActivity;
 import com.googlecode.android.wifi.tether.TetherApplication;
 import com.xd.adhocroute1s.RouteSettingsActivity;
-import com.xd.wifimultihop.R;
 
 public class MainActivity extends Activity {
 	private static final int MENU_SETUP = 0;

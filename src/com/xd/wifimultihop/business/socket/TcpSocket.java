@@ -71,6 +71,7 @@ public class TcpSocket {
 
 	public void socketConnect() {
 		try {
+			if (serverSocket == null) return;
 			socket = serverSocket.accept();
 			inputStream = socket.getInputStream();
 		} catch (IOException e) {
@@ -101,6 +102,7 @@ public class TcpSocket {
 	}
 
 	public Buffer tcpRecv() {
+		if(inputStream == null) return null;
 		int size;
 		try {
 			if ((size = inputStream.read(buffer)) != -1) {

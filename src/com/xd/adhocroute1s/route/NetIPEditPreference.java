@@ -7,9 +7,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.EditText;
 
+import com.googlecode.android.wifi.tether.R;
 import com.googlecode.android.wifi.tether.TetherApplication;
-import com.xd.adhocroute1s.AdhocRouteApp;
-import com.xd.wifimultihop.R;
 /**
  * 支持判断是否是合法的用斜杠和数字表示的子网号
  * @author qhyuan1992

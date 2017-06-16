@@ -8,7 +8,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.xd.wifimultihop.R;
+import com.googlecode.android.wifi.tether.R;
 
 /**
  * 通用对话框

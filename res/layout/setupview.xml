@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen  
-    xmlns:android="http://schemas.android.com/apk/res/android">  
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="网络设置">  
 	<PreferenceCategory android:title="@string/setup_layout_category_wifi"
 		android:key="wifiprefs">
 		<ListPreference  
@@ -65,7 +66,7 @@
 			android:dialogTitle="更改设备IP" 
 			android:maxLength="32"
 			android:dialogMessage="使用以下IP作为该设备的IP地址，注意只需要填写最后一个字节：(1-254之间)"
-			android:defaultValue="" />
+			 />
 		
 		<CheckBoxPreference  
 			android:key="hidessidpref"  

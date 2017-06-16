@@ -11,7 +11,7 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.xd.wifimultihop.R;
+import com.googlecode.android.wifi.tether.R;
 
 
 public class ExploreActivity extends Activity {

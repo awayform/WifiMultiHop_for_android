@@ -22,7 +22,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.googlecode.android.wifi.tether.system.CoreTask;
-import com.xd.wifimultihop.R;
 
 public class LogActivity extends Activity {
 

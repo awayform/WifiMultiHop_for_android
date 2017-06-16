@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.googlecode.android.wifi.tether.R;
 import com.xd.adhocroute1s.data.Route;
-import com.xd.wifimultihop.R;
 public class RouteAdapter extends BaseAdapter{
 
 	public Context context;

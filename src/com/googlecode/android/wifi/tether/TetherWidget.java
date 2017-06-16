@@ -11,8 +11,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.RemoteViews;
 
-import com.xd.wifimultihop.R;
-
 public class TetherWidget extends AppWidgetProvider {
     static final String TAG = "TetherWidget";
 

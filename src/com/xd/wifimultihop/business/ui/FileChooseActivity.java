@@ -21,7 +21,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.xd.wifimultihop.R;
+import com.googlecode.android.wifi.tether.R;
 import com.xd.wifimultihop.business.app.Constants;
 
 public class FileChooseActivity extends Activity {
